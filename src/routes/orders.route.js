@@ -8,7 +8,7 @@ const  router = Router();
 
 router.post('/order', isAuth, create);
 router.get('/order', isAuth, getAll)
-router.get('/order/"id', isAuth, get);
+router.get('/order/:id', isAuth, get);
 
 
 
