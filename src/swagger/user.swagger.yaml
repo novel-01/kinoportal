@@ -1,0 +1,110 @@
+  /**
+    * @swagger
+    * /api/user/payment:
+    *   post:
+    *     summary: Create payment
+    *     tags: [users]
+    *     description: API to create user payment.
+    *     requestBody:
+    *       content:
+    *         multipart/form-data:
+    *           schema:
+    *             type: object
+    *             properties:
+    *               balance:
+    *                 example: 100
+    *                 type: number
+    *                 required: true
+    *     responses:
+    *       201:
+    *         description: Payment created successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: success
+    *                 data:
+    *                   type: object
+    *                   example: {}
+    *
+    * /api/user:
+    *   post:
+    *     summary: Create user
+    *     tags: [admins]
+    *     requestBody:
+    *       content:
+    *         multipart/form-data:
+    *           schema:
+    *             type: object
+    *             properties:
+    *               username:
+    *                 example: Tom
+    *                 type: string
+    *                 required: true
+    *               password:
+    *                 example: Tom
+    *                 type: string
+    *                 required: true
+    *               fullname:
+    *                 example: Tom
+    *                 type: string
+    *                 required: true
+    *     responses:
+    *       201:
+    *         description: User created successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: success
+    *                 data:
+    *                   type: object
+    *                   example: {}
+    *
+    * /api/user/{id}:
+    *   get:
+    *     summary: Get user by ID
+    *     tags: [users]
+    *     parameters:
+    *       - in: path
+    *         name: id
+    *         schema:
+    *           type: string
+    *         required: true
+    *         description: User ID
+    *     responses:
+    *       200:
+    *         description: User found successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: success
+    *                 data:
+    *                   type: object
+    *                   example: {}
+    *
+    * /api/user/statistics:
+    *   get:
+    *     summary: Get user statistics
+    *     tags: [users]
+    *     responses:
+    *       200:
+    *         description: User statistics retrieved successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: success
+    *                 data:
+    *                   type: object
+    *                   example: {}
+    */

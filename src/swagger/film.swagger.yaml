@@ -1,0 +1,96 @@
+  /**
+    * @swagger
+    * /api/film:
+    *   post:
+    *     summary: Create a new film
+    *     tags: [users]
+    *     description: API for creating a new film.
+    *     requestBody:
+    *       required: true
+    *       content:
+    *         multipart/form-data:
+    *           schema:
+    *             type: object
+    *             properties:
+    *               name:
+    *                 type: string
+    *                 example: Tom
+    *                 required: true
+    *               description:
+    *                 type: string
+    *                 example: Cristiano
+    *                 required: true
+    *               year:
+    *                 type: number
+    *                 example: 998940102003
+    *                 required: true
+    *               price:
+    *                 type: number
+    *                 example: 77792003
+    *                 required: true
+    *               file:
+    *                 type: string
+    *                 required: true
+    *               video_url:
+    *                 type: string
+    *                 required: true
+    *               release:
+    *                 type: date
+    *                 required: true
+    *     responses:
+    *       201:
+    *         description: Film created successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: successful
+    *                 data:
+    *                   type: object
+    *                   example: {data}
+    *
+    * /api/film/{id}:
+    *   get:
+    *     summary: Find a film by ID
+    *     tags: [users]
+    *     parameters:
+    *       - in: path
+    *         name: id
+    *         schema:
+    *           type: string
+    *         required: true
+    *         description: Film ID
+    *     responses:
+    *       200:
+    *         description: Film found successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: successful
+    *                 data:
+    *                   type: object
+    *                   example: {object}
+    *
+    * /api/films:
+    *   get:
+    *     summary: Find all films with filtering
+    *     tags: [users]
+    *     responses:
+    *       200:
+    *         description: Films found successfully.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: successful
+    *                 data:
+    *                   type: array
+    *                   example: [film1, film2]
+    */

@@ -1,0 +1,70 @@
+  /**
+    * @swagger
+    * /api/auth/register:
+    *   post:
+    *     summary: Создание пользователя
+    *     tags: [Auth]
+    *     description: API для создания пользователя.
+    *     requestBody:
+    *       required: true
+    *       content:
+    *         multipart/form-data:
+    *           schema:
+    *             type: object
+    *             properties:
+    *               username:
+    *                 example: Tom
+    *                 type: string
+    *               fullname:
+    *                 example: Cristiano
+    *                 type: string
+    *               password:
+    *                 type: string
+    *                 example: 123456
+    *     responses:
+    *       201:
+    *         description: Пользователь успешно создан.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               type: object
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: success
+    *                 data:
+    *                   type: string
+    *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    * /api/auth/login:
+    *   post:
+    *     summary: Авторизация пользователя
+    *     tags: [Auth]
+    *     requestBody:
+    *       required: true
+    *       content:
+    *         application/json:
+    *           schema:
+    *             type: object
+    *             properties:
+    *               username:
+    *                 type: string
+    *                 example: 998940102003
+    *               password:
+    *                 type: string
+    *                 example: 123456
+    *     responses:
+    *       200:
+    *         description: Авторизация прошла успешно.
+    *         content:
+    *           application/json:
+    *             schema:
+    *               type: object
+    *               properties:
+    *                 message:
+    *                   type: string
+    *                   example: success
+    *                 data:
+    *                   type: string
+    *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    */
